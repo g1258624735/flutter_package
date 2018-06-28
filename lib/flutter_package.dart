@@ -5,6 +5,7 @@ library flutter_package;
  */
 void main() {
   test1();
+  test2();
 }
 
 /**
@@ -37,7 +38,11 @@ void test1() {
  */
 void test2() {
   var myString = demo1();
-  
+  var arr_1 = [];
+  for (var i = 0; i++; i < 5) {
+    arr_1[i] = i;
+  }
+  arr_1.forEach((c)=>c());
 }
 
 String demo1() {

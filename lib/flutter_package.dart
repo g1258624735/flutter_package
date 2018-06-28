@@ -38,11 +38,22 @@ void test1() {
  */
 void test2() {
   var myString = demo1();
-  var arr_1 = [];
-  for (var i = 0; i++; i < 5) {
-    arr_1[i] = i;
+  for (var i = 0; i < 5; i++) {
+    print(i);
   }
-  arr_1.forEach((c)=>c());
+  int a = 3;
+  int b = 2;
+  // 取整~/操作符
+  print(a ~/ b);
+  // num 是 int 和 double 父类
+  num c = 1;
+  print(c);
+  // 对象的不同构造函数的表现形式
+ var p1 = new Point(1, 2, 3);
+ var p2 = new Point.test([2,3,4]);
+ print(p1);
+ print(p2);
+
 }
 
 String demo1() {
@@ -53,3 +64,24 @@ String demo1() {
  * =>  匿名函数的写法  只有一个表达式的 简单写法
  */
 String demo2() => "nihao";
+
+class Point {
+
+  //num int he double 的 父类
+  num x ;
+  num y;
+  num z;
+
+  //下面的构造函数 this.x 是一种简写 相当于 this.x = x; 不需要在下面赋值了
+   Point(this.x,this.y,z){
+    this.z = z;
+  }
+  //另一种形式的构造函数
+  Point.test( var list):x=list[0],y=list[1],z= list[2]{
+
+  }
+   String toString()=> 'x:$x y:$y z$z';
+
+}
+
+

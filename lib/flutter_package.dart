@@ -49,11 +49,10 @@ void test2() {
   num c = 1;
   print(c);
   // 对象的不同构造函数的表现形式
- var p1 = new Point(1, 2, 3);
- var p2 = new Point.test([2,3,4]);
- print(p1);
- print(p2);
-
+  var p1 = new Point(1, 2, 3);
+  var p2 = new Point.test([2, 3, 4]);
+  print(p1);
+  print(p2);
 }
 
 String demo1() {
@@ -66,22 +65,41 @@ String demo1() {
 String demo2() => "nihao";
 
 class Point {
-
   //num int he double 的 父类
-  num x ;
+  num x;
+
   num y;
   num z;
 
+  // 变量前面加下划线 代表私有属性 类似于 java private
+  num _YYYY;
+
   //下面的构造函数 this.x 是一种简写 相当于 this.x = x; 不需要在下面赋值了
-   Point(this.x,this.y,z){
+  Point(this.x, this.y, z) {
     this.z = z;
   }
-  //另一种形式的构造函数
-  Point.test( var list):x=list[0],y=list[1],z= list[2]{
 
+  Point.test2(num a) {
+    this.z = a;
+    this.x = a;
+    this.y = a;
   }
-   String toString()=> 'x:$x y:$y z$z';
 
+  //另一种形式的构造函数
+  Point.test(var list)
+      : x = list[0],
+        y = list[1],
+        z = list[2] {}
+
+  void test1() {}
+
+  String toString() => 'x:$x y:$y z$z';
 }
 
+class Point2 extends Point {
+  Point2(num x, num y, num z) : super(x, y, z);
 
+  void test2() {
+    test1();
+  }
+}

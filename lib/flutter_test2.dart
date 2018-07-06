@@ -15,7 +15,8 @@ void main() {
 //  test2_2();
 //  test2_3();
 //  test2_4(true, true);
-  test2_5();
+  print(test2_6(1, 2));
+  ;
 }
 
 void test2_1() {
@@ -84,11 +85,20 @@ void test2_5() {
       print(e);
     }
   }
-
 }
 
- class Text_3 {
+class Text {
+  void print(String text) {}
+}
+
+class Text_3 implements Text{
   int a;
   int b;
 
+  @override
+  void print(String text) {
+
+  }
 }
+
+int test2_6(int a, int b) => 101;

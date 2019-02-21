@@ -30,7 +30,7 @@ void test2_2() {
   //文件流的读写 Stream
   String fileName = "C:/Users/chenshaodan/Desktop/1111.txt";
   Stream<List<int>> stream = new File(fileName).openRead();
-  stream.transform(UTF8.decoder).listen(print);
+  stream.transform(utf8.decoder).listen(print);
 
   //
 //  String path = "https://www.dartlang.org/f/dailyNewsDigest.txt";

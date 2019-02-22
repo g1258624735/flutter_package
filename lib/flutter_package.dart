@@ -89,9 +89,11 @@ class Point {
   Point.test(var list)
       : x = list[0],
         y = list[1],
-        z = list[2] {}
+        z = list[2] {
 
-  void test1() {}
+  }
+
+   void test3() {}
 
   String toString() => 'x:$x y:$y z$z';
 }
@@ -100,6 +102,6 @@ class Point2 extends Point {
   Point2(num x, num y, num z) : super(x, y, z);
 
   void test2() {
-    test1();
+    test3();
   }
 }

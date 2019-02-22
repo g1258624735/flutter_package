@@ -20,8 +20,7 @@ void main() {
 }
 
 void test2_1() {
-  HttpServer
-      .bind('127.0.0.1', 4444)
+  HttpServer.bind('127.0.0.1', 4444)
       .then((server) => print('set.isbroadcast'))
       .catchError(print);
 }
@@ -91,14 +90,15 @@ class Text {
   void print(String text) {}
 }
 
-class Text_3 implements Text{
+/**
+ *接口实现
+ */
+class Text_3 implements Text {
   int a;
   int b;
 
   @override
-  void print(String text) {
-
-  }
+  void print(String text) {}
 }
 
 int test2_6(int a, int b) => 101;

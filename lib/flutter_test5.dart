@@ -25,6 +25,26 @@ void test5_1() {
         break;
     }
   }
+  // map 添加数据的一种简单写法
+  var map = {"1": "1", "2": "2"};
+//  map["1"] = "2";
+  map.putIfAbsent("1", getTest5_1_test1);
+
+// 可以把一个函数返回给一个变量
+  var f1 = printNum5_1;
+  Function f2 = printNum5_1;
+  var f3 = (int a) => print("a = $a");
+  f1(1);
+  f2(2);
+  f3(6);
+}
+
+printNum5_1(int a) {
+  print("$a");
+}
+
+String getTest5_1_test1() {
+  return "2";
 }
 
 class Test5Person {

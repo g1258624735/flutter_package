@@ -5,6 +5,8 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:convert';
 import 'dart:convert';
+
+import 'Point.dart';
 //import 'dart:html';
 
 /**
@@ -16,7 +18,9 @@ void main() {
 //  test2_3();
 //  test2_4(true, true);
   print(test2_6(1, 2));
-  ;
+  var p1 = new Point(1, 2, 3);
+  p1.xyxz="1111";
+
 }
 
 void test2_1() {

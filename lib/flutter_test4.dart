@@ -10,6 +10,7 @@ void main() {
 void test4_1() {
   //List 集合 类似于java 的数组
   List list = [1, 2, 3, 4];
+  list.add(5);
   print(list[0]);
   // 特殊for 循环 还有其他for 循环模式和 java 类似
 

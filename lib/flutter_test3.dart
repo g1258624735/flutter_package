@@ -11,7 +11,6 @@ void main() {
 //  new Text_3_2().printTest("你好");
 }
 
-void test3_1() {}
 
 abstract class Text {
   void printTest(String text) {

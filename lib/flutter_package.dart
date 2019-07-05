@@ -18,6 +18,7 @@ void test1() {
   //三引号 可以多行编写
   var str3 = """ iajap
   nihao
+  hahah
   """;
   //断言 不符合立即终止执行
   assert(str1 == "123");
@@ -43,16 +44,18 @@ void test2() {
   }
   int a = 3;
   int b = 2;
+  double e =1.33;
   // 取整~/操作符
   print(a ~/ b);
   // num 是 int 和 double 父类
-  num c = 1;
+  num c = 1.8809009;
   print(c);
   // 对象的不同构造函数的表现形式
   var p1 = new Point(1, 2, 3);
   var p2 = new Point.test([2, 3, 4]);
+
   print(p1);
-  print(p2);
+  print(p2._YYYY);
 }
 
 String demo1() {
@@ -65,21 +68,21 @@ String demo1() {
 String demo2() => "nihao";
 
 class Point {
-  //num int he double 的 父类
-  num x;
+    //num int he double 的 父类
+    num x;
 
-  num y;
-  num z;
+    num y;
+    num z;
 
-  // 变量前面加下划线 代表私有属性 类似于 java private
-  num _YYYY;
+    // 变量前面加下划线 代表私有属性 类似于 java private
+    num _YYYY;
 
-  //下面的构造函数 this.x 是一种简写 相当于 this.x = x; 不需要在下面赋值了
-  Point(this.x, this.y, z) {
+    //下面的构造函数 this.x 是一种简写 相当于 this.x = x; 不需要在下面赋值了
+    Point(this.x, this.y, z) {
     this.z = z;
-  }
+    }
 
-  Point.test2(num a) {
+    Point.test2(num a) {
     this.z = a;
     this.x = a;
     this.y = a;
@@ -95,13 +98,8 @@ class Point {
 
    void test3() {}
 
+   // 函数方法的简写方式
   String toString() => 'x:$x y:$y z$z';
 }
 
-class Point2 extends Point {
-  Point2(num x, num y, num z) : super(x, y, z);
 
-  void test2() {
-    test3();
-  }
-}

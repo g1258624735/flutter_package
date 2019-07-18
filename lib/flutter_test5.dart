@@ -7,7 +7,7 @@ library flutter_package;
  *
  */
 void main() {
-  test5_1();
+  printNum5_2();
 }
 
 void test5_1() {
@@ -41,6 +41,12 @@ void test5_1() {
 
 printNum5_1(int a) {
   print("$a");
+}
+void printNum5_2() {
+  int s1 =1;
+  String s2 = "33343";
+  String s3 = "$s1+${1+s1}";
+  print(s3);
 }
 
 String getTest5_1_test1() {

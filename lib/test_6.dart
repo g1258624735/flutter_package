@@ -15,8 +15,10 @@ void main() {
 //  print(time);
 
 // 测试定时取值
-  List<String> money = ["101", "102", "103", "104"];
-  List<String> time = ["1分钟", "2分钟", "3分钟", "4分钟"];
+//  List<String> money = ["101", "102", "103", "104"];
+  List<String> money = ["101", "102","103", "104","105"];
+//  List<String> time = ["1分钟", "2分钟", "3分钟", "4分钟"];
+  List<String> time = ["1分钟", "2分钟", "3分钟", "4分钟","5分钟"];
   int _scrollIndex = 0; //当前收益轮播到的 条目
   String _preIncome = "0.00"; //正在显示收益
   String _nextIncome = "0.00"; //将要显示的下一个收益
@@ -53,6 +55,7 @@ void main() {
       _scrollIndex = 0;
     }
   });
+
 }
 
 //时间差处理
